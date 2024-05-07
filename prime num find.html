@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Numbers</title>
+    <style>
+    .prime{
+        background-color: cadetblue;
+        color: black;
+        border-color: 2px solid black;
+        height: 300px;
+        width: 350px;
+        text-align: center;
+        justify-content: center;
+        margin-left: 400px;
+        margin-top: 200px;
+    }
+    .result{
+        background-color: palegreen;
+        border: 2px solid black;
+        margin-top: 200px;
+        border-left: 350px;
+    }
+    
+    
+    </style>
+    
+</head>
+<body>
+    <div class="prime">
+    <h2 color="Violet">Prime Number</h2>
+    <input type="number" name="" id="number">
+    <button onclick="demo()">click</button>
+
+    
+    
+    
+</div>
+
+    <script>
+        function demo()
+        {
+            var num=document.getElementById("number").value;
+            var isprime;
+            
+
+            for(var i=2; i<=num; i++)
+            {
+                isprime = 1;
+
+                for(var j=2; j<=i/2; j++)
+                {
+                    if(i%j == 0)
+                    {
+                        isprime=0;
+                        break;
+                    }
+                }
+                if(isprime == 1){
+                    document.write(i+"<br>");
+                }
+
+            }
+        }
+    </script>
+    
+    
+    
+</body>
+</html>
